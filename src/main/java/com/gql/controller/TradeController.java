@@ -70,7 +70,7 @@ public class TradeController {
         return "Committed successfully " + instruments.size();
     }
 
-    @GetMapping("/findTradesByCounterparty/")
+    @PostMapping("/findTradesByCounterparty/")
     public List<Trade> getTrades(String counterparty, String riskClass) {
         return (List<Trade>) tradeRepository.findByCounterpartyAndRiskClass(counterparty, riskClass);
     }
