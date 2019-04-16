@@ -1,0 +1,29 @@
+[
+	{
+		"id":1,
+	    "counterparty":"Morgan_stanley",
+    	"quantity":"1.001",
+    	"tradeDateTime":"20190416",
+    	"riskClass":"OIL",
+		"notional":"11.0",
+		"instrument":{
+			"id":1,
+			"isin":"1234",
+			"sedol":"SEDOL-1"
+		}
+	},
+	{
+		"id":2,
+	    "counterparty":"Morgan_stanley",
+    	"quantity":"1.001",
+    	"tradeDateTime":"20190416",
+    	"riskClass":"OIL",
+		"notional":"11.0",
+		"instrument":{
+			"id":2,
+			"isin":"12345",
+			"sedol":"SEDOL-2"
+		}
+
+	}
+]

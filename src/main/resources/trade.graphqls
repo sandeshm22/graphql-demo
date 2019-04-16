@@ -1,0 +1,25 @@
+schema{
+    query : Query
+}
+
+
+type Query {
+    allTrade: [Trade]
+    findTradesByCounterparty(counterparty : String ,riskclass : String) : [Trade]
+}
+
+type Trade {
+    id : Int
+    counterparty : String
+    quantity : Double
+    tradeDateTime : Date
+    riskClass : String
+    notional : Double
+    instrument : Instrument
+}
+
+type Instrument {
+        id : Int
+        isin : String
+        sedol : Double
+}
