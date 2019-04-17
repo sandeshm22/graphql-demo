@@ -20,6 +20,15 @@ public class Trade {
     private Date tradeDateTime;
     private String riskClass;
     private Double notional;
+
+    public Instrument getInstrument() {
+        return instrument;
+    }
+
+    public void setInstrument(Instrument instrument) {
+        this.instrument = instrument;
+    }
+
     //@Column(table = "Instrument")
     @JoinColumn(name="instrumentID")
     @ManyToOne
@@ -71,5 +80,18 @@ public class Trade {
 
     public void setNotional(Double notional) {
         this.notional = notional;
+    }
+
+    @Override
+    public String toString() {
+        return "Trade{" +
+                "id=" + id +
+                ", counterparty='" + counterparty + '\'' +
+                ", quantity=" + quantity +
+                ", tradeDateTime=" + tradeDateTime +
+                ", riskClass='" + riskClass + '\'' +
+                ", notional=" + notional +
+                ", instrument=" + instrument +
+                '}';
     }
 }

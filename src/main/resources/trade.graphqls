@@ -8,18 +8,20 @@ type Query {
     findTradesByCounterparty(counterparty : String ,riskclass : String) : [Trade]
 }
 
+scalar DateTime
+
 type Trade {
     id : Int
     counterparty : String
-    quantity : Double
-    tradeDateTime : Date
+    quantity : Float
+    tradeDateTime : DateTime
     riskClass : String
-    notional : Double
+    notional : Float
     instrument : Instrument
 }
 
 type Instrument {
         id : Int
         isin : String
-        sedol : Double
+        sedol : String
 }

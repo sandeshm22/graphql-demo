@@ -42,4 +42,12 @@ public class Instrument {
         this.sedol = sedol;
     }
 
+    @Override
+    public String toString() {
+        return "Instrument{" +
+                "id=" + id +
+                ", isin='" + isin + '\'' +
+                ", sedol='" + sedol + '\'' +
+                '}';
+    }
 }
